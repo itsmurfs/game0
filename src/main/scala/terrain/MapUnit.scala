@@ -1,4 +1,4 @@
-import terrain.Building
+package terrain
 
 /**
   * Created by snowp on 24/01/2016.
@@ -21,13 +21,4 @@ case class Ground(buildUnit: Building) extends MapUnit{
 case class Resource(resourceType: String) extends MapUnit{
   override def isBuildable: Boolean = false
   //override def Build(): Unit = ???
-}
-
-
-
-def IsBuildable(m: MapUnit): Boolean = m match {
-  case Resource(e) => if ( e == "corn") true else false
-  case Ground(_) => true
-  case Water(_) => false
-
 }
